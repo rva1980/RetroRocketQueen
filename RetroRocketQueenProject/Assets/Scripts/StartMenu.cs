@@ -1,0 +1,130 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+
+public class StartMenu : MonoBehaviour
+{
+    public Canvas uiCanvas;
+
+    public Button playButton;
+    public Button optionsButton;
+    public Button scoresButton;
+    public Button quitButton;
+
+    public AudioSource buttonPressed;
+    //public AudioSource menuMusic;
+
+    public float secondsWait;
+
+    private GameObject _selectedObject;
+
+    
+
+    void Start()
+    {
+        int height = Screen.height;
+        int _scaleFactor = height / 180;
+        uiCanvas.scaleFactor = _scaleFactor;
+
+        playButton.Select();
+
+        _selectedObject = new GameObject();
+    }
+
+    void Awake()
+    {
+        //menuMusic.time = PlayerPrefs.GetFloat("MenuMusicTime", 0f);
+        AudioListener.pause = false;
+    }
+
+    void Update()
+    {
+        int height = Screen.height;
+        int _scaleFactor = height / 180;
+        uiCanvas.scaleFactor = _scaleFactor;
+
+        // RESETEAR HIGH SCORES - SOLO MODO DESARROLLO
+        if (Input.GetKeyDown("r"))
+        {
+            PlayerPrefs.DeleteKey("HighScoresTable");
+            PlayerPrefs.DeleteKey("MusicVolume");
+            PlayerPrefs.DeleteKey("FxVolume");
+            PlayerPrefs.DeleteKey("ScreenEffect");
+        }
+
+
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            EventSystem.current.SetSelectedGameObject(_selectedObject);
+        }
+        else
+        {
+            _selectedObject = EventSystem.current.currentSelectedGameObject;
+        }
+
+
+    }
+
+    void Play()
+    {
+        Destroy(GameObject.Find("MenuMusic"));
+        buttonPressed.Play();
+        //menuMusic.Stop();
+        playButton.GetComponent<Animator>().SetBool("Pressed", true);
+        StartCoroutine("LoadGame");
+
+        
+    }
+    IEnumerator LoadGame()
+    {
+        yield return new WaitForSeconds(secondsWait);
+        //PlayerPrefs.SetFloat("MenuMusicTime", 0f);
+        SceneManager.LoadScene("Game");
+    }
+
+    public void Scores()
+    {
+        buttonPressed.Play();
+        scoresButton.GetComponent<Animator>().SetBool("Pressed", true);
+        StartCoroutine("LoadScores");
+        
+    }
+    IEnumerator LoadScores()
+    {
+        yield return new WaitForSeconds(secondsWait);
+        //PlayerPrefs.SetFloat("MenuMusicTime", menuMusic.time);
+        SceneManager.LoadScene("HighScores");
+    }
+
+    public void Options()
+    {
+        buttonPressed.Play();
+        optionsButton.GetComponent<Animator>().SetBool("Pressed", true);
+        StartCoroutine("LoadOptions");
+
+    }
+    IEnumerator LoadOptions()
+    {
+        yield return new WaitForSeconds(secondsWait);
+        //PlayerPrefs.SetFloat("MenuMusicTime", menuMusic.time);
+        SceneManager.LoadScene("Options");
+    }
+
+    public void Quit()
+    {
+        Destroy(GameObject.Find("MenuMusic"));
+        //menuMusic.Stop();
+        buttonPressed.Play();
+        quitButton.GetComponent<Animator>().SetBool("Pressed", true);
+        StartCoroutine("LoadQuit");
+    }
+    IEnumerator LoadQuit()
+    {
+        yield return new WaitForSeconds(secondsWait);
+        //PlayerPrefs.SetFloat("MenuMusicTime", 0f);
+        Application.Quit();
+    }
+}

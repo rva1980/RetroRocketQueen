@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: MineralAnimatedTile
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -4273040773273805053, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: -4273040773273805053, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: -4273040773273805053, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: -4273040773273805053, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: -4273040773273805053, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: -4273040773273805053, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: -4273040773273805053, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: -4273040773273805053, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: -4273040773273805053, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: -4273040773273805053, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: 2648637593872261555, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: -4634305944984584564, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: 6410808404107830126, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: 4738304366668291204, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: 337658842480283512, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  - {fileID: -1824155797746198117, guid: e7ed6982050967e40ad8c2697e78280c, type: 3}
+  m_MinSpeed: 16
+  m_MaxSpeed: 16
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 1

@@ -1,0 +1,198 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Cabin
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 4.9375
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Enabled
+    path: 
+    classID: 82
+    script: {fileID: 0}
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 3634892007867675768, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5
+      value: {fileID: -879789012440997994, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5.0625
+      value: {fileID: 4848878939260172810, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5.125
+      value: {fileID: -5687724042440268143, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5.1875
+      value: {fileID: -1539501382447227750, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5.25
+      value: {fileID: 3915453057151218813, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5.3125
+      value: {fileID: 3428929140307550159, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5.375
+      value: {fileID: -117880055947816303, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    attribute: m_Sprite
+    path: FrontCabin
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 0}
+    - time: 5.0625
+      value: {fileID: -3422533557881991169, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5.125
+      value: {fileID: 231611899649052980, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5.1875
+      value: {fileID: -1371746429950553420, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5.25
+      value: {fileID: -4940031589002978103, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5.3125
+      value: {fileID: -4874108527554084754, guid: cf3dea3e0163ee046adb1a1be17e29f5,
+        type: 3}
+    - time: 5.375
+      value: {fileID: 0}
+    attribute: m_Sprite
+    path: BackCabin
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 16
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 3305885265
+      script: {fileID: 0}
+      typeID: 82
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 623185850
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 468584427
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 3634892007867675768, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: -879789012440997994, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: 4848878939260172810, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: -5687724042440268143, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: -1539501382447227750, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: 3915453057151218813, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: 3428929140307550159, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: -117880055947816303, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: 0}
+    - {fileID: -3422533557881991169, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: 231611899649052980, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: -1371746429950553420, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: -4940031589002978103, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: -4874108527554084754, guid: cf3dea3e0163ee046adb1a1be17e29f5, type: 3}
+    - {fileID: 0}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 5.4375
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 4.9375
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Enabled
+    path: 
+    classID: 82
+    script: {fileID: 0}
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events: []

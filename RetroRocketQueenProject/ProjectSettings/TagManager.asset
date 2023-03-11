@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Rock
+  - Ground
+  - Mineral
+  - Pause
+  - Rejilla
+  - GameOver
+  - Grass
+  - Ship
+  - NearMountains
+  - FarMountains
+  - Meteor
+  - Geyser
+  - Helmet
+  - Gemstone
+  - FX
+  - Music
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Rock
+  - Ground
+  - MineralGrounded
+  - Pause
+  - Rejilla
+  - GameOver
+  - Grass
+  - Ship
+  - NearMountains
+  - FarMountains
+  - Mineral
+  - Meteor
+  - Geyser
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: FarMountains
+    uniqueID: 515302943
+    locked: 0
+  - name: NearMountains
+    uniqueID: 4122679013
+    locked: 0
+  - name: Flash
+    uniqueID: 1970742221
+    locked: 0
+  - name: Grass
+    uniqueID: 2614499431
+    locked: 0
+  - name: BackShip
+    uniqueID: 2351964893
+    locked: 0
+  - name: Player
+    uniqueID: 3433863829
+    locked: 0
+  - name: Meteor
+    uniqueID: 4117314975
+    locked: 0
+  - name: Geyser
+    uniqueID: 1357591409
+    locked: 0
+  - name: Mineral
+    uniqueID: 3345482249
+    locked: 0
+  - name: FrontShip
+    uniqueID: 46279669
+    locked: 0
+  - name: Ground
+    uniqueID: 3065875503
+    locked: 0
+  - name: Rock
+    uniqueID: 3004389733
+    locked: 0
+  - name: MineralGrounded
+    uniqueID: 1316071331
+    locked: 0
+  - name: Rejilla
+    uniqueID: 2013271515
+    locked: 0
+  - name: UI
+    uniqueID: 291079855
+    locked: 0
+  - name: Pause
+    uniqueID: 4198221379
+    locked: 0
+  - name: GameOver
+    uniqueID: 1403079583
+    locked: 0
