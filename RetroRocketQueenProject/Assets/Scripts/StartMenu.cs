@@ -25,8 +25,8 @@ public class StartMenu : MonoBehaviour
 
     void Start()
     {
-        int height = Screen.height;
-        int _scaleFactor = height / 180;
+        //int height = Screen.height;
+        int _scaleFactor = GetScaleFactor();
         uiCanvas.scaleFactor = _scaleFactor;
 
         playButton.Select();
@@ -42,8 +42,8 @@ public class StartMenu : MonoBehaviour
 
     void Update()
     {
-        int height = Screen.height;
-        int _scaleFactor = height / 180;
+        //int height = Screen.height;
+        int _scaleFactor = GetScaleFactor();
         uiCanvas.scaleFactor = _scaleFactor;
 
         // RESETEAR HIGH SCORES - SOLO MODO DESARROLLO
@@ -126,5 +126,19 @@ public class StartMenu : MonoBehaviour
         yield return new WaitForSeconds(secondsWait);
         //PlayerPrefs.SetFloat("MenuMusicTime", 0f);
         Application.Quit();
+    }
+
+    private int GetScaleFactor()
+    {
+        int ret;
+        if (((decimal)Screen.height / (decimal)Screen.width) > ((decimal)180 / (decimal)320))
+        {
+            ret = Screen.width / 320;
+        }
+        else
+        {
+            ret = Screen.height / 180;
+        }
+        return ret;
     }
 }

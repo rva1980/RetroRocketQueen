@@ -47,8 +47,8 @@ public class OptionsMenu : MonoBehaviour
 
     void Start()
     {
-        int height = Screen.height;
-        int _scaleFactor = height / 180;
+        //int height = Screen.height;
+        int _scaleFactor = GetScaleFactor();
         uiCanvas.scaleFactor = _scaleFactor;
 
         musicVolumeButton.Select();
@@ -58,8 +58,8 @@ public class OptionsMenu : MonoBehaviour
 
     void Update()
     {
-        int height = Screen.height;
-        int _scaleFactor = height / 180;
+        //int height = Screen.height;
+        int _scaleFactor = GetScaleFactor();
         uiCanvas.scaleFactor = _scaleFactor;
 
         if (Input.GetButtonDown("Cancel"))
@@ -336,5 +336,19 @@ public class OptionsMenu : MonoBehaviour
         }
 
         screenEffectController.UpdateScreenEffect(_screenEffect);
+    }
+
+    private int GetScaleFactor()
+    {
+        int ret;
+        if (((decimal)Screen.height / (decimal)Screen.width) > ((decimal)180 / (decimal)320))
+        {
+            ret = Screen.width / 320;
+        }
+        else
+        {
+            ret = Screen.height / 180;
+        }
+        return ret;
     }
 }
