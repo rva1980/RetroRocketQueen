@@ -15,6 +15,7 @@ public class LCD : MonoBehaviour
     [Range(-3, 20)] public float contrast = -2.0f;
     [Range(-200, 200)] public float brightness = 0.0f;
 
+
     protected Material material
     {
         get
@@ -39,6 +40,9 @@ public class LCD : MonoBehaviour
 
         mat.SetFloat("_Contrast", contrast);
         mat.SetFloat("_Brightness", brightness);
+
+        mat.SetInt("_ScreenWidth", 2560);
+        mat.SetInt("_ScreenHeight", Screen.height);
 
         Graphics.Blit(source, destination, mat);
     }
