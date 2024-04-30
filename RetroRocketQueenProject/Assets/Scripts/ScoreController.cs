@@ -113,7 +113,7 @@ public class ScoreController : MonoBehaviour
             energia = "0" + energia;
         }
 
-        string textScore = "rock:" + energia + "  mine:" + minerales + "  time:" + tiempo + "  dist:" + distancia;
+        string textScore = "fuel:" + energia + "  mine:" + minerales + "  time:" + tiempo + "  dist:" + distancia;
         score.text = textScore;
 
         //if (

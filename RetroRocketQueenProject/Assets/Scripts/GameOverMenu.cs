@@ -524,7 +524,7 @@ public class GameOverMenu : MonoBehaviour
             distanceScore.text = "distance   x" + FormatScore(distanceFactor, 2) + " " + FormatScore(_distance * distanceFactor, 5);
             timeScore.text = "time       x" + FormatScore(timeFactor, 2) + " " + FormatScore(_time * timeFactor, 5);
             mineralsScore.text = "minerals   x" + FormatScore(mineralsFactor, 2) + " " + FormatScore(_minerals * mineralsFactor, 5);
-            rocketScore.text = "rocket     x" + FormatScore(rocketFactor, 2) + " " + FormatScore(_rocket * rocketFactor, 5);
+            rocketScore.text = "fuel       x" + FormatScore(rocketFactor, 2) + " " + FormatScore(_rocket * rocketFactor, 5);
             totalScore.text = "total          " + FormatScore(_total, 5);
 
 
