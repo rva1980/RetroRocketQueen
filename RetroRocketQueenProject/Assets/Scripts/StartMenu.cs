@@ -19,6 +19,10 @@ public class StartMenu : MonoBehaviour
 
     public float secondsWait;
 
+    public GameObject letterR;
+    public GameObject letterV;
+    public GameObject letterA;
+
     private GameObject _selectedObject;
 
     
@@ -38,6 +42,7 @@ public class StartMenu : MonoBehaviour
     {
         //menuMusic.time = PlayerPrefs.GetFloat("MenuMusicTime", 0f);
         AudioListener.pause = false;
+        
     }
 
     void Update()
@@ -47,14 +52,23 @@ public class StartMenu : MonoBehaviour
         uiCanvas.scaleFactor = _scaleFactor;
 
         // RESETEAR HIGH SCORES - SOLO MODO DESARROLLO
-        if (Input.GetKeyDown("r"))
+        if (Input.GetKey("r") & Input.GetKey("v") & Input.GetKey("a"))
         {
             PlayerPrefs.DeleteKey("HighScoresTable");
             PlayerPrefs.DeleteKey("MusicVolume");
             PlayerPrefs.DeleteKey("FxVolume");
             PlayerPrefs.DeleteKey("ScreenEffect");
-        }
 
+            this.letterR.SetActive(true);
+            this.letterV.SetActive(true);
+            this.letterA.SetActive(true);
+        }
+        else
+        {
+            this.letterR.SetActive(false);
+            this.letterV.SetActive(false);
+            this.letterA.SetActive(false);
+        }
 
         if (EventSystem.current.currentSelectedGameObject == null)
         {
