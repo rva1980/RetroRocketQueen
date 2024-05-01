@@ -9963,7 +9963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Color: {r: 0.2, g: 0.4, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10292,9 +10292,9 @@ MonoBehaviour:
   quitButton: {fileID: 885132958}
   buttonPressed: {fileID: 1979956278}
   secondsWait: 1
-  letterR: {fileID: 0}
-  letterV: {fileID: 0}
-  letterA: {fileID: 0}
+  letterR: {fileID: 1058707543}
+  letterV: {fileID: 1198334218}
+  letterA: {fileID: 407893683}
 --- !u!114 &518367597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16326,7 +16326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.13333334, b: 0.06666667, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -21481,7 +21481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.26666668, g: 1, b: 0.13333334, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
