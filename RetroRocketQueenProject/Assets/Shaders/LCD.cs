@@ -41,8 +41,7 @@ public class LCD : MonoBehaviour
         mat.SetFloat("_Contrast", contrast);
         mat.SetFloat("_Brightness", brightness);
 
-        mat.SetInt("_ScreenWidth", 2560);
-        mat.SetInt("_ScreenHeight", Screen.height);
+        mat.SetInt("_ScaleFactor", GetScaleFactor());
 
         Graphics.Blit(source, destination, mat);
     }
@@ -53,5 +52,19 @@ public class LCD : MonoBehaviour
         {
             DestroyImmediate(_material);
         }
+    }
+
+    private int GetScaleFactor()
+    {
+        int ret;
+        if (((decimal)Screen.height / (decimal)Screen.width) > ((decimal)180 / (decimal)320))
+        {
+            ret = Screen.width / 320;
+        }
+        else
+        {
+            ret = Screen.height / 180;
+        }
+        return ret;
     }
 }

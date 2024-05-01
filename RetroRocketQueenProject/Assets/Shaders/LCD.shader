@@ -12,8 +12,7 @@ Shader "Custom/LCD"
         _Contrast("Contrast", Float) = -2
         _Brightness("Brightness", Float) = 0
 
-        _ScreenWidth("Screen Width", Int) = 320
-        _ScreenHeight("Screen Height", Int) = 180
+        _ScaleFactor("Scale Factor", Int) = 4
     }
 
         SubShader{
@@ -41,8 +40,7 @@ Shader "Custom/LCD"
                 uniform float _BlueCoef;
                 uniform float _Contrast;
                 uniform float _Brightness;
-                uniform int _ScreenWidth;
-                uniform int _ScreenHeight;
+                uniform int _ScaleFactor;
 
                 v2f vert(appdata_img v)
                 {
@@ -58,25 +56,14 @@ Shader "Custom/LCD"
                     half4 color = tex2D(_MainTex, i.uv);
                     float4 muls = float4(0, 0, 0, 1);
 
-                    int pixeles = pixeles = (int)(_ScreenHeight / 180);
-
-                    //if (((float)_ScreenHeight / (float)_ScreenWidth) > ((float)180.0 / (float)320.0))
-                    //{
-                    //    pixeles = (int)(_ScreenWidth / 320);    
-                    //}
-                    //else
-                    //{
-                    //    pixeles = (int)(_ScreenHeight / 180);
-                    //}
-
-                    float2 ps = (i.scr_pos.xy * _ScreenParams.xy / i.scr_pos.w) * pixeles;
-                    uint px = (uint)ps.x % pixeles;
-                    uint py = (uint)ps.y % pixeles;
+                    float2 ps = (i.scr_pos.xy * _ScreenParams.xy / i.scr_pos.w) * _ScaleFactor;
+                    uint px = (uint)ps.x % _ScaleFactor;
+                    uint py = (uint)ps.y % _ScaleFactor;
 
                     color += (_Brightness / 255);
                     color = color - _Contrast * (color - 1.0) * color * (color - 0.5);
 
-                    if ((px == (pixeles - 1) || py == (pixeles - 1)) && pixeles > 3)
+                    if ((px == (_ScaleFactor - 1) || py == (_ScaleFactor - 1)) && _ScaleFactor > 3)
                     {
                         color.r = _RedCoef;
                         color.g = _GreenCoef;
