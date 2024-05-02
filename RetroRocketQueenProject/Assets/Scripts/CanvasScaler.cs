@@ -4,29 +4,35 @@ using UnityEngine;
 
 public class CanvasScaler : MonoBehaviour
 {
-    public Canvas scoreCanvas;
-    public Canvas pauseCanvas;
-    public Canvas gameoverCanvas;
+    [Range(0, 1)] public float waitTime = 0.2f;
 
-    // Update is called once per frame
-    void Start()
+    private Canvas _canvas;
+
+    private float _startTime; 
+
+    private void Awake()
     {
-        //int height = Screen.height;
-        int _scaleFactor = GetScaleFactor();
-        scoreCanvas.scaleFactor = _scaleFactor;
-        pauseCanvas.scaleFactor = _scaleFactor;
-        gameoverCanvas.scaleFactor = _scaleFactor;
-        
+        _canvas = GetComponent<Canvas>();
+        _canvas.scaleFactor = GetScaleFactor();
+        _canvas.enabled = false;
+        _startTime = Time.time;
     }
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        _canvas.scaleFactor = GetScaleFactor();
+    }
+
+    // Update is called once per frame
     void Update()
     {
-        //int height = Screen.height;
-        int _scaleFactor = GetScaleFactor();
-        scoreCanvas.scaleFactor = _scaleFactor;
-        pauseCanvas.scaleFactor = _scaleFactor;
-        gameoverCanvas.scaleFactor = _scaleFactor;
+        _canvas.scaleFactor = GetScaleFactor();
 
+        if (Time.time >= _startTime + waitTime)
+        {
+            _canvas.enabled = true;
+        }       
     }
 
     private int GetScaleFactor()

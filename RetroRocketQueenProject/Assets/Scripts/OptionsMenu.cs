@@ -33,9 +33,6 @@ public class OptionsMenu : MonoBehaviour
 
     private GameObject _selectedObject;
 
-    
-
-
     //OPTIONS
 
     private int _musicVolume;
@@ -45,12 +42,22 @@ public class OptionsMenu : MonoBehaviour
     public ScreenEffectController screenEffectController;
     public VolumeController volumeController;
 
+    void Awake()
+    {
+        //menuMusic.time = PlayerPrefs.GetFloat("MenuMusicTime", 0f);
+
+        LoadMusicVolume();
+        LoadFxVolume();
+        LoadScreenEffect();
+
+        UpdateMusicVolume();
+        UpdateFxVolume();
+        UpdateScreenEffect();
+    }
+
+
     void Start()
     {
-        //int height = Screen.height;
-        int _scaleFactor = GetScaleFactor();
-        uiCanvas.scaleFactor = _scaleFactor;
-
         musicVolumeButton.Select();
 
         _selectedObject = new GameObject();
@@ -58,16 +65,10 @@ public class OptionsMenu : MonoBehaviour
 
     void Update()
     {
-        //int height = Screen.height;
-        int _scaleFactor = GetScaleFactor();
-        uiCanvas.scaleFactor = _scaleFactor;
-
         if (Input.GetButtonDown("Cancel"))
         {
             Back();
         }
-
-
 
         if (EventSystem.current.currentSelectedGameObject == null)
         {
@@ -77,8 +78,6 @@ public class OptionsMenu : MonoBehaviour
         {
             _selectedObject = EventSystem.current.currentSelectedGameObject;
         }
-
-
 
 
         _horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -211,20 +210,7 @@ public class OptionsMenu : MonoBehaviour
         }
     }
 
-    void Awake()
-    {
-        //menuMusic.time = PlayerPrefs.GetFloat("MenuMusicTime", 0f);
-
-        LoadMusicVolume();
-        LoadFxVolume();
-        LoadScreenEffect();
-
-        UpdateMusicVolume();
-        UpdateFxVolume();
-        UpdateScreenEffect();
-    }
-
-
+    
     public void Back()
     {
         buttonPressed.Play();
@@ -259,9 +245,7 @@ public class OptionsMenu : MonoBehaviour
     }
 
     private void UpdateFxVolume()
-    {
-       
-
+    { 
         PlayerPrefs.SetInt("FxVolume", _fxVolume);
         PlayerPrefs.Save();
 
@@ -336,19 +320,5 @@ public class OptionsMenu : MonoBehaviour
         }
 
         screenEffectController.UpdateScreenEffect(_screenEffect);
-    }
-
-    private int GetScaleFactor()
-    {
-        int ret;
-        if (((decimal)Screen.height / (decimal)Screen.width) > ((decimal)180 / (decimal)320))
-        {
-            ret = Screen.width / 320;
-        }
-        else
-        {
-            ret = Screen.height / 180;
-        }
-        return ret;
     }
 }

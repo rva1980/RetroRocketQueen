@@ -1490,6 +1490,7 @@ MonoBehaviour:
   maxBlueCoef: 1
   minBlueCoef: 0.8
   scansCoef: 1
+  scansCount: 180
   contrast: 0
   brightness: 0
 --- !u!114 &925202977
@@ -2252,6 +2253,7 @@ GameObject:
   - component: {fileID: 1864549713}
   - component: {fileID: 1864549712}
   - component: {fileID: 1864549711}
+  - component: {fileID: 1864549715}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2350,6 +2352,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1864549715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864549710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dbaf688b945e874384a86936869e809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0.1
 --- !u!1 &1865930632
 GameObject:
   m_ObjectHideFlags: 0

@@ -53890,6 +53890,7 @@ GameObject:
   - component: {fileID: 1322426582}
   - component: {fileID: 1322426581}
   - component: {fileID: 1322426580}
+  - component: {fileID: 1322426584}
   m_Layer: 14
   m_Name: GameOverCanvas
   m_TagString: GameOver
@@ -53988,6 +53989,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1322426584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322426579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dbaf688b945e874384a86936869e809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0
 --- !u!1 &1334489341
 GameObject:
   m_ObjectHideFlags: 0
@@ -54509,6 +54523,7 @@ GameObject:
   - component: {fileID: 1409822848}
   - component: {fileID: 1409822847}
   - component: {fileID: 1409822846}
+  - component: {fileID: 1409822850}
   m_Layer: 12
   m_Name: PauseCanvas
   m_TagString: Pause
@@ -54600,6 +54615,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1409822850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409822845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dbaf688b945e874384a86936869e809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0
 --- !u!1 &1418654431
 GameObject:
   m_ObjectHideFlags: 0
@@ -70601,7 +70629,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669373436}
-  - component: {fileID: 1669373439}
   - component: {fileID: 1669373435}
   - component: {fileID: 1669373437}
   - component: {fileID: 1669373438}
@@ -70733,21 +70760,6 @@ MonoBehaviour:
   exitButton: {fileID: 928171688}
   selectSound: {fileID: 1492315809}
   isGameOver: 0
---- !u!114 &1669373439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669373434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dbaf688b945e874384a86936869e809, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreCanvas: {fileID: 1976701902}
-  pauseCanvas: {fileID: 1409822848}
-  gameoverCanvas: {fileID: 1322426582}
 --- !u!114 &1669373440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76959,6 +76971,7 @@ GameObject:
   - component: {fileID: 1976701902}
   - component: {fileID: 1976701904}
   - component: {fileID: 1976701903}
+  - component: {fileID: 1976701905}
   m_Layer: 5
   m_Name: ScoreCanvas
   m_TagString: Untagged
@@ -77050,6 +77063,19 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &1976701905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976701900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dbaf688b945e874384a86936869e809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0.05
 --- !u!1 &2001638740
 GameObject:
   m_ObjectHideFlags: 0

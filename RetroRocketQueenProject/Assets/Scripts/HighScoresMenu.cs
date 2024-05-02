@@ -25,13 +25,8 @@ public class HighScoresMenu : MonoBehaviour
 
     private GameObject _selectedObject;
 
-
     void Start()
     {
-        //int height = Screen.height;
-        int _scaleFactor = GetScaleFactor();
-        uiCanvas.scaleFactor = _scaleFactor;
-
         backButton.Select();
 
         _selectedObject = new GameObject();
@@ -39,10 +34,6 @@ public class HighScoresMenu : MonoBehaviour
 
     void Update()
     {
-        //int height = Screen.height;
-        int _scaleFactor = GetScaleFactor();
-        uiCanvas.scaleFactor = _scaleFactor;
-
         if (Input.GetButtonDown("Cancel"))
         {
             Back();
@@ -183,17 +174,4 @@ public class HighScoresMenu : MonoBehaviour
         public string name;
     }
 
-    private int GetScaleFactor()
-    {
-        int ret;
-        if (((decimal)Screen.height / (decimal)Screen.width) > ((decimal)180 / (decimal)320))
-        {
-            ret = Screen.width / 320;
-        }
-        else
-        {
-            ret = Screen.height / 180;
-        }
-        return ret;
-    }
 }

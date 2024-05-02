@@ -103,8 +103,6 @@ public class GameOverMenu : MonoBehaviour
         }
 
 
-
-
     }
 
     void Awake()

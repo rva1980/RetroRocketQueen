@@ -25,14 +25,8 @@ public class StartMenu : MonoBehaviour
 
     private GameObject _selectedObject;
 
-    
-
     void Start()
     {
-        //int height = Screen.height;
-        int _scaleFactor = GetScaleFactor();
-        uiCanvas.scaleFactor = _scaleFactor;
-
         playButton.Select();
 
         _selectedObject = new GameObject();
@@ -42,15 +36,10 @@ public class StartMenu : MonoBehaviour
     {
         //menuMusic.time = PlayerPrefs.GetFloat("MenuMusicTime", 0f);
         AudioListener.pause = false;
-        
     }
 
     void Update()
     {
-        //int height = Screen.height;
-        int _scaleFactor = GetScaleFactor();
-        uiCanvas.scaleFactor = _scaleFactor;
-
         // RESETEAR HIGH SCORES - SOLO MODO DESARROLLO
         if (Input.GetKey("r") & Input.GetKey("v") & Input.GetKey("a"))
         {
@@ -78,8 +67,6 @@ public class StartMenu : MonoBehaviour
         {
             _selectedObject = EventSystem.current.currentSelectedGameObject;
         }
-
-
     }
 
     void Play()
@@ -89,9 +76,8 @@ public class StartMenu : MonoBehaviour
         //menuMusic.Stop();
         playButton.GetComponent<Animator>().SetBool("Pressed", true);
         StartCoroutine("LoadGame");
-
-        
     }
+
     IEnumerator LoadGame()
     {
         yield return new WaitForSeconds(secondsWait);
@@ -106,6 +92,7 @@ public class StartMenu : MonoBehaviour
         StartCoroutine("LoadScores");
         
     }
+
     IEnumerator LoadScores()
     {
         yield return new WaitForSeconds(secondsWait);
@@ -120,6 +107,7 @@ public class StartMenu : MonoBehaviour
         StartCoroutine("LoadOptions");
 
     }
+
     IEnumerator LoadOptions()
     {
         yield return new WaitForSeconds(secondsWait);
@@ -135,24 +123,11 @@ public class StartMenu : MonoBehaviour
         quitButton.GetComponent<Animator>().SetBool("Pressed", true);
         StartCoroutine("LoadQuit");
     }
+
     IEnumerator LoadQuit()
     {
         yield return new WaitForSeconds(secondsWait);
         //PlayerPrefs.SetFloat("MenuMusicTime", 0f);
         Application.Quit();
-    }
-
-    private int GetScaleFactor()
-    {
-        int ret;
-        if (((decimal)Screen.height / (decimal)Screen.width) > ((decimal)180 / (decimal)320))
-        {
-            ret = Screen.width / 320;
-        }
-        else
-        {
-            ret = Screen.height / 180;
-        }
-        return ret;
     }
 }
